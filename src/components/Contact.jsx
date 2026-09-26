@@ -5,7 +5,9 @@ import Section3D from './Section3D'
 import { site } from '../data/site'
 import { submitEnquiry } from '../lib/submitEnquiry'
 const types = ['Website', 'Mobile App', 'AI & Automation', 'Custom Software', 'UI / UX Design', 'Backend & Cloud', 'Other']
-const init = { name: '', email: '', company: '', phone: '', type: '', message: '' }
+const budgetOptions = ['Under $5k', '$5k – $15k', '$15k – $30k', '$30k – $75k', '$75k+']
+const timelineOptions = ['ASAP', '2–4 weeks', '1–3 months', '3–6 months', 'Flexible']
+const init = { name: '', email: '', company: '', phone: '', type: '', budget: '', timeline: '', message: '' }
 function validate(v) {
   const e = {}
   if (v.name.trim().length < 2) e.name = 'Please enter your name.'
@@ -74,9 +76,17 @@ export default function Contact() {
                 <Field id="company" label="Company"><input {...p('company')} autoComplete="organization" /></Field>
                 <Field id="phone" label="Phone" error={errors.phone}><input {...p('phone')} type="tel" autoComplete="tel" /></Field>
               </div>
-              <Field id="type" label="Project Type *" error={errors.type}>
-                <select {...p('type')}><option value="">Select…</option>{types.map((t) => <option key={t}>{t}</option>)}</select>
-              </Field>
+              <div className="two">
+                <Field id="type" label="Project Type *" error={errors.type}>
+                  <select {...p('type')}><option value="">Select…</option>{types.map((t) => <option key={t}>{t}</option>)}</select>
+                </Field>
+                <Field id="budget" label="Budget">
+                  <select {...p('budget')}><option value="">Select…</option>{budgetOptions.map((b) => <option key={b}>{b}</option>)}</select>
+                </Field>
+                <Field id="timeline" label="Timeline">
+                  <select {...p('timeline')}><option value="">Select…</option>{timelineOptions.map((t) => <option key={t}>{t}</option>)}</select>
+                </Field>
+              </div>
               <Field id="message" label="Message *" error={errors.message}><textarea {...p('message')} rows={5} /></Field>
               {state === 'error' && <p className="err" role="alert">Something went wrong. Please try again.</p>}
               <button className="btn" disabled={state === 'sending'}>{state === 'sending' ? 'Sending…' : 'Send Project Enquiry'} <ArrowRight size={18} /></button>
