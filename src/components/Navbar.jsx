@@ -25,7 +25,7 @@ export default function Navbar() {
 >
   <div className="wrap nav-in">
     <small className="logo-image">
-      <img src="/favicon.png" alt="Aero Technology logo"/>
+      <img src="/logo.png" alt="Aero Technology logo"/>
     </small>
 
     <nav aria-label="Primary" className="links">
