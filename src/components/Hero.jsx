@@ -28,7 +28,7 @@ export default function Hero() {
             <a href="#contact" className="btn">Start a Project <ArrowRight size={18} /></a>
             <a href="#services" className="btn ghost">Explore Services <ArrowRight size={18} /></a>
           </motion.div>
-          <motion.ul className="hero-proof" {...rise(6)} aria-label="Crosscut capabilities">
+          <motion.ul className="hero-proof" {...rise(6)} aria-label="Aero capabilities">
             <li><strong>05</strong><span>Featured builds</span></li>
             <li><strong>AI +</strong><span>Automation systems</span></li>
             <li><strong>IN</strong><span>Based in India</span></li>
