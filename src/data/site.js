@@ -6,8 +6,7 @@ export const site = {
   },
   socials: [
     { label: 'Instagram', url: 'https://instagram.com/crosscut0109' },
-    { label: 'GitHub', url: 'https://github.com/blackeyy22' },
-    { label: 'Portfolio', url: 'http://crosscutcorp.ddns.net' },
+    { label: 'GitHub', url: 'https://github.com/blackeyy22' }
   ],
   // Simple direct Discord webhook for enquiry submissions.
   enquiryEndpoint: 'https://discord.com/api/webhooks/1553286677211123723/upvPB-u_Q0GeSDZKWh4dpbzk6tEjLxME2zdhiAaByR9T-sDZk0l4J9dFfnXYdlnrm4xz',

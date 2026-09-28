@@ -4,10 +4,10 @@ import Section3D from './Section3D'
 import { why } from '../data/content'
 export default function Why() {
   return (
-    <section className="sec" aria-label="Why Crosscut">
+    <section className="sec" aria-label="Why Aero">
       <Section3D />
       <div className="wrap">
-        <Heading eyebrow="Why Crosscut" title="Why Crosscut?" />
+        <Heading eyebrow="Why Aero" title="Why AERO?" />
         <div className="grid4">
           {why.map(([t, d], i) => (
             <Reveal key={t} delay={i * 0.07}>

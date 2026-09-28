@@ -17,12 +17,24 @@ export default function Navbar() {
     return () => { window.removeEventListener('keydown', esc); document.body.style.overflow = '' }
   }, [open])
   return (
-    <motion.header className={'nav' + (scrolled ? ' small' : '')} initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7 }}>
-      <div className="wrap nav-in">
-        <a href="#home" className="logo" aria-label="Crosscut Technology home"><b>CROSSCUT</b><small>TECHNOLOGY</small></a>
-        <nav aria-label="Primary" className="links">
-          {nav.map(([l, id]) => <a key={id} href={'#' + id} className="ul">{l}</a>)}
-        </nav>
+    <motion.header
+  className={'nav' + (scrolled ? ' small' : '')}
+  initial={{ y: -30, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.7 }}
+>
+  <div className="wrap nav-in">
+    <small className="logo-image">
+      <img src="/logo.png" alt="Aero Technology logo"/>
+    </small>
+
+    <nav aria-label="Primary" className="links">
+      {nav.map(([l, id]) => (
+        <a key={id} href={'#' + id} className="ul">
+          {l}
+        </a>
+      ))}
+    </nav>
         <a href="#contact" className="btn sm cta-d">Start a Project</a>
         <button className="burger" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(!open)}>
           {open ? <X size={22} /> : <Menu size={22} />}
