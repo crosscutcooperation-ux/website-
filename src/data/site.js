@@ -1,6 +1,6 @@
 export const site = {
   contact: {
-    email: 'robinmohan@yahoo.com',
+    email: 'technologyaero@yahoo',
     phone: '',
     location: 'India',
   },
